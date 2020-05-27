@@ -28,7 +28,7 @@
 #include "WS2812FX/WS2812FX.h"
 
 #define LED_RGB_SCALE 255       // this is the scaling factor used for color conversion
-#define LED_COUNT 50            // this is the number of WS2812B leds on the strip
+#define LED_COUNT 14            // this is the number of WS2812B leds on the strip
 #define LED_INBUILT_GPIO 2      // this is the onboard LED used to show on/off only
 
 // Global variables
@@ -82,8 +82,8 @@ static void hsi2rgb(float h, float s, float i, ws2812_pixel_t* rgb) {
 
 static void wifi_init() {
     struct sdk_station_config wifi_config = {
-        .ssid = WIFI_SSID,
-        .password = WIFI_PASSWORD,
+        .ssid = UniFi,
+        .password = saturn554,
     };
 
     sdk_wifi_set_opmode(STATION_MODE);
